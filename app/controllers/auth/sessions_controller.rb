@@ -9,10 +9,12 @@ class Auth::SessionsController < ApplicationController
   end
 end
 
-class Auth::SessionsController < Devise::SessionsController
-  def guest_sign_in
-    end_user = User.guest
-    sign_in end_user
-   render json: user
+class User < ApplicationRecord
+  # ゲストユーザーが存在しない場合、ゲストユーザーを作成
+  def self.guest
+    find_or_create_by!(email: "guest@example.com") do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.name = "ゲストユーザー"
+    end
   end
 end
