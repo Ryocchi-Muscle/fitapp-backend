@@ -13,5 +13,7 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'auth/sessions#guest_sign_in'
   end
 
+    # トップページは homes#index を追加
+  root "homes#index"
 
 end
