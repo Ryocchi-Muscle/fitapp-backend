@@ -7,4 +7,11 @@ Rails.application.routes.draw do
   namespace :auth do
     resources :sessions, only: %i[index]
   end
+
+  # ゲストログイン機能のルーティング
+  devise_scope :end_user do
+    post 'end_users/guest_sign_in', to: 'auth/sessions#guest_sign_in'
+  end
+
+
 end

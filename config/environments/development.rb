@@ -1,18 +1,18 @@
-require 'active_support/core_ext/integer/time'
+require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-   config.action_mailer.default_options = { from: ENV['EMAIL_ADDRESS'] }
+  config.action_mailer.default_options = { from: ENV["EMAIL_ADDRESS"] }
   # hostにはデフォルトでlocalhost3000になっているので、Railsのポート番号である3001に変更する。
-  config.action_mailer.default_url_options = { host: 'localhost:3001' }
+  config.action_mailer.default_url_options = { host: "localhost:3001" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    address: "smtp.gmail.com",
     port: 587,
-    domain: 'gmail.com',
-    user_name: ENV['EMAIL_ADDRESS'],
-    password: ENV['EMAIL_PASSWORD'],
-    authentication: 'plain',
-    enable_starttls_auto: true
+    domain: "gmail.com",
+    user_name: ENV["EMAIL_ADDRESS"],
+    password: ENV["EMAIL_PASSWORD"],
+    authentication: "plain",
+    enable_starttls_auto: true,
   }
   config.cache_classes = false
 
@@ -27,10 +27,10 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join('tmp/caching-dev.txt').exist?
+  if Rails.root.join("tmp/caching-dev.txt").exist?
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+      "Cache-Control" => "public, max-age=#{2.days.to_i}",
     }
   else
     config.action_controller.perform_caching = false
