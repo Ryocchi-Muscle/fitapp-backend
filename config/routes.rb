@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   end
 
   # ゲストログイン機能のルーティング
-  devise_scope :end_user do
-    post 'end_users/guest_sign_in', to: 'auth/sessions#guest_sign_in'
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'auth/sessions#guest_sign_in'
   end
 
 

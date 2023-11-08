@@ -8,3 +8,11 @@ class Auth::SessionsController < ApplicationController
     end
   end
 end
+
+class Auth::SessionsController < Devise::SessionsController
+  def guest_sign_in
+    end_user = User.guest
+    sign_in end_user
+   render json: user
+  end
+end
