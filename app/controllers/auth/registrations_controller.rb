@@ -1,4 +1,5 @@
 #registrations_controller.rbはサインアップ、サインイン、サインアウトを実行する API コントローラー
+#要は、ログイン機能のコントローラー
 # Auth::RegistrationsControllerクラスはDeviseTokenAuth::RegistrationsControllerを継承する
 class Auth::RegistrationsController < DeviseTokenAuth::RegistrationsController
   private
