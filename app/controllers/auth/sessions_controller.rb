@@ -8,9 +8,11 @@ class Auth::SessionsController < DeviseTokenAuth::SessionsController
     end
   end
 
+  
+
   def guest_sign_in
     # ゲストユーザーでログイン
-    binding.pry
+    # binding.pry
     @resource = User.guest # ①ゲストユーザー情報を取得
     @token = @resource.create_token # ②ゲストユーザーの認証情報を作成
     @resource.save! # ③認証情報を保存
