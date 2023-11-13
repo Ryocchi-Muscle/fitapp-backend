@@ -50,13 +50,13 @@ group :development, :test do
    gem "pry-doc"
    gem "pry-rails"
      # テストフレームワーク rspec を導入する
-  gem 'rspec-rails'
+   gem 'rspec-rails'
+   gem "rubocop-faker"
+   gem "rubocop-rails"
+   gem "rubocop-rspec"
 end
 
 group :development do
-  gem 'rubocop', require: false # 追加
-  gem 'rubocop-performance', require: false # 追加
-  gem 'rubocop-rails', require: false # 追加
-  gem 'rubocop-rspec' # 追加
+
 end
 
