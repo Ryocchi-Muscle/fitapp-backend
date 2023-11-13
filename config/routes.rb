@@ -5,11 +5,11 @@ Rails.application.routes.draw do
                                       }
   # ログインユーザー取得のルーティング
   namespace :auth do
-    resources :sessions, only: %i[:index,:guest_sign_in]
+    resources :sessions, only: [:index]
   end
 
   # ゲストログイン機能
   devise_scope :user do
-    post "auth/guest_sign_in", to: "auth/sessions#guest_sign_in"
+    post "auth/guest_sign_in", to: "auth/guest_sessions#guest_sign_in"
   end
 end
