@@ -36,6 +36,8 @@ gem "bootsnap", require: false
 # Devise
 gem "devise"
 gem "devise_token_auth"
+# devise を日本語化する
+ gem "devise-i18n"
 # HTTP通信
 gem "rack-cors"
 # MySQL接続で使用する環境変数の設定
