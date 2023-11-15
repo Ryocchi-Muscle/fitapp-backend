@@ -265,6 +265,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  byebug
   debug
   devise
   devise-i18n

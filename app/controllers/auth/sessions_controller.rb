@@ -1,6 +1,6 @@
 # ログイン時のユーザーを取得するための API コントローラー
 class Auth::SessionsController < ApplicationController
-  binding.pry
+  # binding.pry
 
   def index
     if current_user

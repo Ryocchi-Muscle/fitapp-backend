@@ -37,7 +37,7 @@ gem "bootsnap", require: false
 gem "devise"
 gem "devise_token_auth"
 # devise を日本語化する
- gem "devise-i18n"
+gem "devise-i18n"
 # HTTP通信
 gem "rack-cors"
 # MySQL接続で使用する環境変数の設定
@@ -55,6 +55,10 @@ group :development, :test do
   gem "rubocop-faker"
   gem "rubocop-rails"
   gem "rubocop-rspec"
+    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+
 end
 
 group :development do
