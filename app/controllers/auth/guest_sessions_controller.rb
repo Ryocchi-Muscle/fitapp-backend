@@ -1,4 +1,4 @@
-# ゲストユーザーでログイン
+# # ゲストユーザーでログイン
 class Auth::GuestSessionsController < DeviseTokenAuth::SessionsController
   def guest_sign_in
     @resource = User.guest # ①ゲストユーザー情報を取得

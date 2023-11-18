@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
   # ログイン機能のルーティング
   mount_devise_token_auth_for "User", at: "auth", controllers: {
-    registrations: "auth/registrations",
-    sessions: 'auth/sessions'
-  }
+                                        registrations: "auth/registrations",
+                                      }
   # ログインユーザー取得のルーティング
   namespace :auth do
     resources :sessions, only: %i[index]
-    resources :guest_sessions, only: [:guest_sign_in,]
   end
 
   # ゲストログイン機能
