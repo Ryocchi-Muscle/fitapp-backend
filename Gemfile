@@ -40,15 +40,14 @@ gem "config"
 gem "devise"
 gem "devise_token_auth"
 # devise を日本語化する
-gem 'devise-i18n'
-gem 'devise-i18n-views'
+gem "devise-i18n"
+gem "devise-i18n-views"
 # HTTP通信
 gem "rack-cors"
 
-
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
- 
+
   # pry コンソールを使えるようにする。
   gem "pry-byebug"
   gem "pry-doc"
@@ -58,11 +57,10 @@ group :development, :test do
   gem "rubocop-faker"
   gem "rubocop-rails"
   gem "rubocop-rspec"
-    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # MySQL接続で使用する環境変数の設定
   gem "dotenv-rails"
-
 end
 
 group :development do
