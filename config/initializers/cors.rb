@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "localhost:8000" #Next.jsからのoriginを許可
+    origins Settings.front_domain #Next.jsからのoriginを許可
 
     resource "*",
              headers: :any,
